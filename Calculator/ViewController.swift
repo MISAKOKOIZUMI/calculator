@@ -151,16 +151,21 @@ class ViewController: UIViewController {
     }
     
     //0
-    @IBAction func btn0(_ sender: AnyObject) {        lbl2.text = ""
+    @IBAction func btn0(_ sender: AnyObject) {
+        lbl2.text = ""
         lbl2txt = ""
         if cal == 0 {
-        num1 += "0"
-        lbl1txt += "0"
-        lbl1.text = lbl1txt
-    }else{
-        num2 += "0"
-        lbl1txt += "0"
-        lbl1.text = lbl1txt
+            if num1 != "" {
+                num1 += "0"
+                lbl1txt += "0"
+                lbl1.text = lbl1txt
+            }
+        }else{
+            if num2 != ""{
+                num2 += "0"
+                lbl1txt += "0"
+                lbl1.text = lbl1txt
+            }
         }
     }
     
